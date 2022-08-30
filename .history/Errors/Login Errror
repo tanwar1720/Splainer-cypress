@@ -1,0 +1,11 @@
+Uncaught:expected
+// This is an exception error handal by setup a uncaught:exception in e2e.js file
+
+Cypress.on("uncaught:exception",(err,runnable)=>
+{ 
+    if (err.message.includes("Cannot set properties of null (setting 'onclick')")){
+        return false
+    }
+
+
+})
