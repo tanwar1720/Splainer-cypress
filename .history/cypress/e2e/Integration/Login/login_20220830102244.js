@@ -46,4 +46,18 @@
       cy.get('.btn.btn-blue-o.px-3.btn-sub').eq(0).click()
       cy.get('.modal-body').should('be.visible')
     })
- })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  })

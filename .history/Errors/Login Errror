@@ -9,3 +9,11 @@ Cypress.on("uncaught:exception",(err,runnable)=>
 
 
 })
+
+// For otp integration
+// set up in config.js file.
+module.exports = on => {
+    on("task", {
+      generateOTP: require("cypress-otp")
+    });
+  };

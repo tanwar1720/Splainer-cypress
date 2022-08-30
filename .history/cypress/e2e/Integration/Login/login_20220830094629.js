@@ -33,17 +33,9 @@
       cy.get('.btn.btn-link').eq(0).click()
       cy.get('.modal-body').find('h5').should('have.text','Reset Password')
       cy.wait(2000)
-      cy.get('#resetemail').type('larose6666@seinfaq.com')
+      cy.get('#resetemail').type('dokidef692@oemmeo.com')
       cy.get('#subscribe').click()  
       cy.get('.swal-modal').should('be.visible')
+      
     })
-    it('Create an Account',()=>
-    {
-      cy.visit('https://staging.splainer.in/')
-      cy.get('li').eq(6).click()
-      cy.get('.btn.btn-link').eq(1).click()
-      cy.url().should('include','https://staging.splainer.in/subscribe')
-      cy.get('.btn.btn-blue-o.px-3.btn-sub').eq(0).click()
-      cy.get('.modal-body').should('be.visible')
-    })
- })
+  })

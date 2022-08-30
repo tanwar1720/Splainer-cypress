@@ -1,5 +1,5 @@
   describe('Login page ', () => {
-    it('Login with correct creditionals ', () => 
+    /*it('Login with correct creditionals ', () => 
     {
       cy.visit('https://staging.splainer.in/')
       cy.get('li').eq(6).click()
@@ -36,7 +36,7 @@
       cy.get('#resetemail').type('larose6666@seinfaq.com')
       cy.get('#subscribe').click()  
       cy.get('.swal-modal').should('be.visible')
-    })
+    })*/
     it('Create an Account',()=>
     {
       cy.visit('https://staging.splainer.in/')
@@ -45,5 +45,23 @@
       cy.url().should('include','https://staging.splainer.in/subscribe')
       cy.get('.btn.btn-blue-o.px-3.btn-sub').eq(0).click()
       cy.get('.modal-body').should('be.visible')
+
+
+
+
     })
- })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  })

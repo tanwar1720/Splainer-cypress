@@ -1,0 +1,25 @@
+
+describe('Account creation',() =>
+{
+    it ('Free subscribe',()=>
+    {
+       cy.visit('https://staging.splainer.in/')
+       cy.get('li').eq(1).click()
+       cy.get('.card.referal-disc-card').eq(0).should('be.visible')
+       cy.get('.btn.btn-blue-o.px-3.btn-sub').eq(0).click()
+       cy.wait(2000)
+       cy.get('.modal-body').should('include.text','Subscribe')
+       cy.get('#first_name').type('Amit')
+       cy.get('#last_name').type('kumar')
+       cy.get('#emaiId').type('kumarroshan1720@gmail.com')
+       //cy.get('select').eq(0).select('18-24').should('eq','18-24')
+       cy.get('select').eq(0).select('18-24').invoke('val').should('eq','18-24')
+       cy.get('select').eq(1).select('Other').should('have.value','Other')
+
+       
+
+
+
+
+    })
+})

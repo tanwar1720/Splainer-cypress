@@ -8,6 +8,6 @@ module.exports = defineConfig({
       })
       // implement node event listeners here
     },
-    specPattern:'cypress/e2e/Integration/Login/*.js'
+    specPattern:'cypress/e2e/ntegration/Login/*.js'
   },
 });
