@@ -48,7 +48,7 @@ describe('subscribePage', () => {
         cy.get('b').should('contain.text','Student discount')
         cy.get('.owl-dot').each(($el,index,$list)=>
         {
-            if($el.next.click())
+            if($el.get('.owl-dot'))
             {
                 cy.wrap($el).click()
             }

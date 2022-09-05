@@ -48,14 +48,7 @@ describe('subscribePage', () => {
         cy.get('b').should('contain.text','Student discount')
         cy.get('.owl-dot').each(($el,index,$list)=>
         {
-            if($el.next.click())
-            {
-                cy.wrap($el).click()
-            }
-            else
-            {
-                cy.log('Not found the Dot tags')
-            }
+            $el.wrap.click()
         })
             
             

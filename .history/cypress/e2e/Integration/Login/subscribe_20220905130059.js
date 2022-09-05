@@ -26,40 +26,11 @@ describe('subscribePage', () => {
         cy.get('small').should('have.css','1') // For asserting the text having css 1
         cy.get('.card.referal-disc-card').each(($el,index,$list)=>
         {
-            if($el.find('small')){
-                cy.wrap($el).should('be.visible') }
-
-             else{
-                cy.log('Not found')
-             }   
+            if($el.someMethod()==='small'){
+                cy.wrap($el).should('be.visible')            }
             
             
         })
-
-        cy.get('.card.referal-disc-card').each(($el,index,$list)=>
-        {
-            if($el.get('.pl-md-1 > .card > div.text-center > .btn')){
-                cy.wrap($el).should('contain.text','Sign me up!') }
-
-             else{
-                cy.log('Not found')
-             }   
-        })
-        cy.get('b').should('contain.text','Student discount')
-        cy.get('.owl-dot').each(($el,index,$list)=>
-        {
-            if($el.next.click())
-            {
-                cy.wrap($el).click()
-            }
-            else
-            {
-                cy.log('Not found the Dot tags')
-            }
-        })
-            
-            
-    
 
 
 
