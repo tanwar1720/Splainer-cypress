@@ -51,6 +51,19 @@ describe('subscribePage', () => {
         cy.get('span:visible').eq(9).click()
         cy.get('span:visible').eq(10).click()
 
- 
+        cy.get('div').should(($div) => {
+  const text = $div.text()
+
+  expect(text).to.match(/foo/)
+  expect(text).to.include('foo')
+  expect(text).not.to.include('bar')
 })
- })
+
+
+
+
+
+
+
+        })
+})

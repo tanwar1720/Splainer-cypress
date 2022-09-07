@@ -51,6 +51,19 @@ describe('subscribePage', () => {
         cy.get('span:visible').eq(9).click()
         cy.get('span:visible').eq(10).click()
 
- 
+        cy.get('div').should(($div) => {
+            const text = $div.text()
+          
+            expect(text).to.match('World')
+            expect(text).to.match('live')
+           // expect(text).not.to.include('bar')
+          })
+          
+
+
+
+
+
+
+        })
 })
- })

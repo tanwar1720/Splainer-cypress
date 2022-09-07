@@ -51,6 +51,10 @@ describe('subscribePage', () => {
         cy.get('span:visible').eq(9).click()
         cy.get('span:visible').eq(10).click()
 
- 
+
+
+
+
+
+        })
 })
- })

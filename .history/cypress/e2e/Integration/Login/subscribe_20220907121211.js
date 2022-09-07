@@ -45,12 +45,7 @@ describe('subscribePage', () => {
         })
         cy.get('b').should('contain.text','Student discount')
         cy.get('span').eq(5).click()
-        cy.get('span:visible').eq(6).click()
-        cy.get('span:visible').eq(7).click()
-        cy.get('span:visible').eq(8).click()
-        cy.get('span:visible').eq(9).click()
-        cy.get('span:visible').eq(10).click()
+        cy.get('span').eq(6).click()
 
- 
+        })
 })
- })
