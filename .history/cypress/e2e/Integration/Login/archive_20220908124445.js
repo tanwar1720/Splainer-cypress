@@ -1,7 +1,6 @@
 /// <reference types="cypress" />
 
 
-
 describe('Archive', () => {
     it('about_Archive', () => {
         cy.visit('https://staging.splainer.in/archive')
@@ -34,19 +33,7 @@ describe('Archive', () => {
            cy.go('back')
            cy.get('.fa-ul').eq(1).find('a').eq(1).click()
            cy.go('back')
-           cy.get('.card-img-top').eq(0).should('have.css','1')
-           cy.get('label').each(($el)=>
-           
-           {
-              cy.wrap ($el).should('be.visible')
-           })
-           cy.get('.card-img-top').each(($el)=>
-           {
-              cy.wrap($el).should('be.visible')
-           })
-
-           cy.get('.container').eq(2).find('.nav-logo').should('have.attr','class')
-           
+           cy.get('.card-img-top').eq(0).should('have.attr','img')
 
            
          

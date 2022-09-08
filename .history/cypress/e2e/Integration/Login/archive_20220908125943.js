@@ -1,5 +1,7 @@
 /// <reference types="cypress" />
 
+const { should } = require("chai")
+const { contains } = require("cypress/types/jquery")
 
 
 describe('Archive', () => {
@@ -45,7 +47,7 @@ describe('Archive', () => {
               cy.wrap($el).should('be.visible')
            })
 
-           cy.get('.container').eq(2).find('.nav-logo').should('have.attr','class')
+           cy.get('.container').should('have.css','3').and .should(contains.toString)
            
 
            

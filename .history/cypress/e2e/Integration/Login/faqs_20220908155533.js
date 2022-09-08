@@ -1,0 +1,24 @@
+describe('faqs_sweets',()=>
+{
+    it ('faq-page',()=>
+    {
+        cy.visit('https://staging.splainer.in/faq')
+        cy.get('.nav-link.active').click()
+        cy.get('h1').should('be.visible')
+        cy.get('h1').should('contain.text','Splainer FAQs!')
+        cy.get('h2').should('be.visible')
+        cy.get('h2').each(($a)=>
+        {
+            cy.log($a.text())
+        })
+        cy.get('.card-body').find('a').eq(0)
+        cy.wait(1000)
+        cy.get('.card-body').eq(1).should('be.visible')
+        cy.get('button').should('be.visible')
+
+    
+
+
+
+    })
+})

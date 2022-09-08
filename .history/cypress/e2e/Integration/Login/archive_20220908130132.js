@@ -45,7 +45,7 @@ describe('Archive', () => {
               cy.wrap($el).should('be.visible')
            })
 
-           cy.get('.container').eq(2).find('.nav-logo').should('have.attr','class')
+           cy.get('.container').should('have.css','3').find('.nav-logo')
            
 
            

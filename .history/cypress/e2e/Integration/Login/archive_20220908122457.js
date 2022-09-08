@@ -1,7 +1,5 @@
 /// <reference types="cypress" />
 
-
-
 describe('Archive', () => {
     it('about_Archive', () => {
         cy.visit('https://staging.splainer.in/archive')
@@ -28,27 +26,8 @@ describe('Archive', () => {
                 cy.go('back')
                 cy.wait(2000)
             })*/
-            //For asserting each link.
-           cy.get('.fa-ul').eq(0).find('a').eq(0).click()
-           cy.url().should('have.string','https://staging.splainer.in/posts/2022/gift-1')
-           cy.go('back')
-           cy.get('.fa-ul').eq(1).find('a').eq(1).click()
-           cy.go('back')
-           cy.get('.card-img-top').eq(0).should('have.css','1')
-           cy.get('label').each(($el)=>
-           
-           {
-              cy.wrap ($el).should('be.visible')
-           })
-           cy.get('.card-img-top').each(($el)=>
-           {
-              cy.wrap($el).should('be.visible')
-           })
-
-           cy.get('.container').eq(2).find('.nav-logo').should('have.attr','class')
-           
-
-           
+          var Link = cy.get('.fa-ul').eq(0).find('a').eq(0).click()
+           Link.cy.go('back')
          
      
     

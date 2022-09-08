@@ -1,7 +1,6 @@
 /// <reference types="cypress" />
 
 
-
 describe('Archive', () => {
     it('about_Archive', () => {
         cy.visit('https://staging.splainer.in/archive')
@@ -45,7 +44,7 @@ describe('Archive', () => {
               cy.wrap($el).should('be.visible')
            })
 
-           cy.get('.container').eq(2).find('.nav-logo').should('have.attr','class')
+           cy.get('.container').should('have.css','3').contains('splainer')
            
 
            
