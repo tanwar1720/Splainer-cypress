@@ -25,9 +25,7 @@ describe('foundingMember',()=>
         cy.get('.d-block > .text-center > .btn').click()
         cy.get('.modal').should('be.visible')
         cy.get('.modal').should('contain.text','Subscribe')
-        cy.get('.modal-body').find('.close > span').click()
-        cy.get('.container').eq(2).should('be.visible')
-        cy.get('.container').eq(2).should('contain.text','splainer')
+        cy.get('[data-layer="Content"]').click()    
 
 
         

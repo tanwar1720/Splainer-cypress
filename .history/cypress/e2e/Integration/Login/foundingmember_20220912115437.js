@@ -1,7 +1,6 @@
 
 /// <reference types="cypress" />
 
-
 describe('foundingMember',()=>
 {
     it('founding_memberPage',()=>
@@ -20,14 +19,7 @@ describe('foundingMember',()=>
         //cy.get('.noUi-touch-area').trigger('mousedown', { which: 1, pageX: 600, pageY: 100 })
         // cy.get('.noUi-handle.noUi-handle-lower').invoke('val', 10000).trigger('change')
         cy.get('.slider.mt-3.d-none.d-md-block').should('be.visible')
-        cy.get('.note:visible').should('be.visible')
-        cy.get('.btn.btn-blue-o.btn-sub').should('contain.text','Count Me In!')
-        cy.get('.d-block > .text-center > .btn').click()
-        cy.get('.modal').should('be.visible')
-        cy.get('.modal').should('contain.text','Subscribe')
-        cy.get('.modal-body').find('.close > span').click()
-        cy.get('.container').eq(2).should('be.visible')
-        cy.get('.container').eq(2).should('contain.text','splainer')
+        cy.get('.note').should('be.visible')
 
 
         

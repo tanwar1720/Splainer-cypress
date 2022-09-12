@@ -24,10 +24,8 @@ describe('foundingMember',()=>
         cy.get('.btn.btn-blue-o.btn-sub').should('contain.text','Count Me In!')
         cy.get('.d-block > .text-center > .btn').click()
         cy.get('.modal').should('be.visible')
-        cy.get('.modal').should('contain.text','Subscribe')
-        cy.get('.modal-body').find('.close > span').click()
-        cy.get('.container').eq(2).should('be.visible')
-        cy.get('.container').eq(2).should('contain.text','splainer')
+        cy.get('.modal').find('Subscribe')
+
 
 
         
