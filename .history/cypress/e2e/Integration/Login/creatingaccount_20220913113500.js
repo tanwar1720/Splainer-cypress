@@ -19,7 +19,7 @@ describe('Account creation', () => {
         cy.get('select').eq(2).select('+91 (India)').should('have.value', 'India')
         cy.get('#contact_no').type('1234567892')
         cy.get('button').contains('Get OTP').click()
-        // cy.wait(1000)
+        cy.wait(1000)
         // cy.task("generateOTP", "yourSecret").then((token) =>{
         // cy.get('#otp').type(123456)})
         // cy.get('#subscribe').click()

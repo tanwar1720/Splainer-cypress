@@ -6,7 +6,8 @@ describe('Login page ', () => {
     
     it('Login with correct creditionals ', () => 
     {
-      cy.login()
+        cy.Loginflow
+
 
 
 

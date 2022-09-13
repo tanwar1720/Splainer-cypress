@@ -21,11 +21,12 @@ describe('First User interface',()=>
           const message = $a.text();
           expect($a, message).to.have.attr("href").not.contain("undefined")
     })
+    it('LoginafterReadmeNow',()=>
+    {
+      cy.login()
+
     })
-   it('LoginafterReadmeNowmodule',()=>
-   {
-     cy.login()
-   })
+    })
 
     
  }) 

@@ -20,12 +20,9 @@ describe('First User interface',()=>
         cy.get("a").each($a => {
           const message = $a.text();
           expect($a, message).to.have.attr("href").not.contain("undefined")
+
+        })
     })
-    })
-   it('LoginafterReadmeNowmodule',()=>
-   {
-     cy.login()
-   })
 
     
  }) 
