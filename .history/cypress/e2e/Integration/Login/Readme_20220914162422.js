@@ -1,4 +1,3 @@
-const dayjs = require('dayjs')
 
 describe('First User interface',()=>
 {
@@ -42,12 +41,25 @@ describe('First User interface',()=>
        cy.url().should('have.string','https://staging.splainer.in/posts/2022/gift-1')
        cy.get('.date').should('be.visible')
 
-       const todaysDate = dayjs().format('MMM DD, YYYY')
+       //const dayjs = require('dayjs')
+
+
+       /*const todaysDate = dayjs().format('MMM DD, YYYY')
+       cy.log(todaysDate)
         
        it("Check date to be less or equal than todays", () => {
-           cy.get('.date', { timeout: 15000 }).invoke('text').should('be.lte', todaysDate)
-          })
-          })
+           cy.get('.date', { timeout: 15000 }).invoke('text').should('be.lte', todaysDate);
+
+         })*/
+       
+
+
+
+
+
+
+      
+   })
 
     
  }) 

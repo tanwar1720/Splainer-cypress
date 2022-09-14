@@ -1,5 +1,6 @@
 /// <reference types="cypress" />
 
+const { includes } = require("cypress/types/lodash")
 
 describe('myAccount', () => {
     it('Accountveiw', () => {
@@ -38,10 +39,6 @@ describe('myAccount', () => {
             cy.log(flag.length)
         })
         cy.get('h3').should('includes.text','Share your love for splainer — earn ours!')
-        cy.get('#refLink').should('have.value','https://staging.splainer.in/referral/TW90F2T')
-        cy.get('p').should('have.length','8')
-        cy.get('.container').eq(2).should('contain.text','splainer')
-        
 
 
 

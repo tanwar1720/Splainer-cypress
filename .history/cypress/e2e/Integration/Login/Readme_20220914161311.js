@@ -1,9 +1,8 @@
-const dayjs = require('dayjs')
 
 describe('First User interface',()=>
 {
     let nevbar
-    it('readmeNow',()=>{
+    it.only('readmeNow',()=>{
   
         cy.visit('https://staging.splainer.in/')
         nevbar=cy.get('.nav-link')
@@ -37,17 +36,31 @@ describe('First User interface',()=>
 
    it ('ReadNow after login(All three reads completed)',()=>
    {   
-       cy.wait(1000)
-       cy.get('.nav-link').eq(0).click()
+    //  const nevbar=cy.get('.nav-link')
+    nevbar.eq(0).click()
+      //  cy.get('.nav-link').eq(0).click({force:true})
        cy.url().should('have.string','https://staging.splainer.in/posts/2022/gift-1')
        cy.get('.date').should('be.visible')
 
-       const todaysDate = dayjs().format('MMM DD, YYYY')
+       //const dayjs = require('dayjs')
+
+
+       /*const todaysDate = dayjs().format('MMM DD, YYYY')
+       cy.log(todaysDate)
         
        it("Check date to be less or equal than todays", () => {
-           cy.get('.date', { timeout: 15000 }).invoke('text').should('be.lte', todaysDate)
-          })
-          })
+           cy.get('.date', { timeout: 15000 }).invoke('text').should('be.lte', todaysDate);
+
+         })*/
+       
+
+
+
+
+
+
+      
+   })
 
     
  }) 

@@ -1,13 +1,9 @@
-const dayjs = require('dayjs')
-
 describe('First User interface',()=>
 {
-    let nevbar
     it('readmeNow',()=>{
   
         cy.visit('https://staging.splainer.in/')
-        nevbar=cy.get('.nav-link')
-        nevbar.eq(0).click()
+        cy.get('.nav-link').eq(0).click()
        // cy.url().should('include','https://staging.splainer.in/posts/2022/A-Taste-for-the-Exotic') 
        //When user has to verify the whole url.
        cy.url().should('contain', 'posts')
@@ -34,20 +30,18 @@ describe('First User interface',()=>
     cy.get('#password').type('123456')
     cy.get('#Login').click()
    })
-
    it ('ReadNow after login(All three reads completed)',()=>
-   {   
-       cy.wait(1000)
-       cy.get('.nav-link').eq(0).click()
-       cy.url().should('have.string','https://staging.splainer.in/posts/2022/gift-1')
-       cy.get('.date').should('be.visible')
+   { 
+       cy.url().should('contain.text','gift-1')
+       
 
-       const todaysDate = dayjs().format('MMM DD, YYYY')
-        
-       it("Check date to be less or equal than todays", () => {
-           cy.get('.date', { timeout: 15000 }).invoke('text').should('be.lte', todaysDate)
-          })
-          })
+
+
+
+
+
+      
+   })
 
     
  }) 

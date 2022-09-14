@@ -45,9 +45,18 @@ describe('First User interface',()=>
        const todaysDate = dayjs().format('MMM DD, YYYY')
         
        it("Check date to be less or equal than todays", () => {
-           cy.get('.date', { timeout: 15000 }).invoke('text').should('be.lte', todaysDate)
-          })
-          })
+           cy.get('.date', { timeout: 15000 }).invoke('text').should('be.lte', todaysDate);
+
+         })
+       
+
+
+
+
+
+
+      
+   })
 
     
  }) 
