@@ -1,4 +1,4 @@
-const emailNo = Math.random();
+
 describe('yearlySubscription _Testsuit',()=>
 {
     it('Y.subscription_testcase',()=>
@@ -17,7 +17,7 @@ describe('yearlySubscription _Testsuit',()=>
         cy.get('.modal-body').contains('Subscribe')
         cy.get('#first_name').type('Rupali')
         cy.get('#last_name').type('kumar')
-        cy.get('#emaiId').type('kumarroshan1703+'+ emailNo +'@gmail.com')
+        cy.get('#emaiId').type('kumarroshan1703+7@gmail.com')
         cy.get('select').eq(0).select('18-24').invoke('val').should('eq', '18-24')
         cy.get('#gender').eq(0).select('Male').should('have.value','Male')
         cy.get('#password').type('123456')
@@ -26,9 +26,9 @@ describe('yearlySubscription _Testsuit',()=>
         cy.get('#contact_no').type('1234567892')
         cy.get('#subscribe').contains('Subscribe Now & Pay')
         cy.get('#subscribe').click()
-        cy.wait(10000)
-        cy.log('.razorpay-checkout-frame').get('body').find('button:visible');
-        // cy.get('.solidbg.svelte-tx5emc').shadow().find('.new-method.has-tooltip.false.svelte-1kfpmw0').click()
+        cy.wait(5000)
+        cy.log(cy.get('.razorpay-checkout-frame').shadow().find('button'))
+        cy.get('.solidbg.svelte-tx5emc').shadow().find('.new-method.has-tooltip.false.svelte-1kfpmw0').click()
 
 
 

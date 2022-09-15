@@ -1,4 +1,4 @@
-const emailNo = Math.random();
+
 describe('yearlySubscription _Testsuit',()=>
 {
     it('Y.subscription_testcase',()=>
@@ -17,7 +17,7 @@ describe('yearlySubscription _Testsuit',()=>
         cy.get('.modal-body').contains('Subscribe')
         cy.get('#first_name').type('Rupali')
         cy.get('#last_name').type('kumar')
-        cy.get('#emaiId').type('kumarroshan1703+'+ emailNo +'@gmail.com')
+        cy.get('#emaiId').type('kumarroshan1703+27@gmail.com')
         cy.get('select').eq(0).select('18-24').invoke('val').should('eq', '18-24')
         cy.get('#gender').eq(0).select('Male').should('have.value','Male')
         cy.get('#password').type('123456')
