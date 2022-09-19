@@ -1,13 +1,8 @@
 /// <reference types="cypress" />
 
-
 const emailNo = Math.random();
 
 describe('subscribePage', () => {
-    beforeEach(()=>
-    {
-        cy.visit('https://staging.splainer.in/')
-    })
     it('signupPage', () => {
         cy.visit('https://staging.splainer.in/')
         cy.get('.nav-link ').eq(1).click()
@@ -58,13 +53,11 @@ describe('subscribePage', () => {
         cy.get('span:visible').eq(8).click()
         cy.get('span:visible').eq(9).click()
         cy.get('span:visible').eq(10).click()
+        
 
-    })
-        it('Getting  14 Days trial',() => {
-            cy.get('.nav-link ').eq(1).click()
-            cy.url().should('include', 'https://staging.splainer.in/subscribe')
+        it('Getting  14 Days trial', () => {
             cy.get('.btn.btn-blue-o.px-3.btn-sub').should('contain.text', 'Sign me up!')
-            cy.get('.btn.btn-blue-o.px-3.btn-sub').eq(0).click()
+            cy.get('.btn.btn-blue-o.px-3.btn-sub').click()
             cy.get('#first_name').type('Rupali')
             cy.get('#last_name').type('kumar')
             cy.get('#emaiId').type('kumarroshan1703+' + emailNo + '@gmail.com')
@@ -73,16 +66,15 @@ describe('subscribePage', () => {
             cy.get('#password').type('123456')
             cy.get('#confpassword').type('123456')
             cy.get('select').eq(2).select('+91 (India)').should('have.value', 'India')
-            cy.get('#contact_no').type('0987654321')
+            cy.get('#contact_no').type('1234567892')
             cy.wait(1000)
-            cy.get('#get-otp').click()
             cy.task("generateOTP", "yourSecret").then((token) => {
-                cy.get('#otp').type(token,{force:true})
+                cy.get('#otp').type(123456)
             })
             cy.get('#subscribe').click()
         })
      })
 
 
-
+})
  

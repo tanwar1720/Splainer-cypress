@@ -4,10 +4,6 @@
 const emailNo = Math.random();
 
 describe('subscribePage', () => {
-    beforeEach(()=>
-    {
-        cy.visit('https://staging.splainer.in/')
-    })
     it('signupPage', () => {
         cy.visit('https://staging.splainer.in/')
         cy.get('.nav-link ').eq(1).click()
@@ -61,6 +57,7 @@ describe('subscribePage', () => {
 
     })
         it('Getting  14 Days trial',() => {
+            cy.visit('https://staging.splainer.in/')
             cy.get('.nav-link ').eq(1).click()
             cy.url().should('include', 'https://staging.splainer.in/subscribe')
             cy.get('.btn.btn-blue-o.px-3.btn-sub').should('contain.text', 'Sign me up!')
@@ -73,11 +70,10 @@ describe('subscribePage', () => {
             cy.get('#password').type('123456')
             cy.get('#confpassword').type('123456')
             cy.get('select').eq(2).select('+91 (India)').should('have.value', 'India')
-            cy.get('#contact_no').type('0987654321')
+            cy.get('#contact_no').type('1234567892')
             cy.wait(1000)
-            cy.get('#get-otp').click()
             cy.task("generateOTP", "yourSecret").then((token) => {
-                cy.get('#otp').type(token,{force:true})
+                cy.get('#get-otp').type(token)
             })
             cy.get('#subscribe').click()
         })

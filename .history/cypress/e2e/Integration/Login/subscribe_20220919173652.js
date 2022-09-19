@@ -61,6 +61,7 @@ describe('subscribePage', () => {
 
     })
         it('Getting  14 Days trial',() => {
+            cy.visit('https://staging.splainer.in/')
             cy.get('.nav-link ').eq(1).click()
             cy.url().should('include', 'https://staging.splainer.in/subscribe')
             cy.get('.btn.btn-blue-o.px-3.btn-sub').should('contain.text', 'Sign me up!')

@@ -27,8 +27,8 @@ describe('yearlySubscription _Testsuit', () => {
         cy.get('select').eq(2).select('+91 (India)').should('have.value', 'India')
         cy.get('#contact_no').type('1234567892')
         cy.get('#subscribe').contains('Subscribe Now & Pay')
-        cy.get('#subscribe').should('contain.text', '2999')
         cy.get('#subscribe').click()
+        cy.get('#subscribe').should('contain.text', '2999')
 
         //     cy.wait(5000)
         // cy.log('.razorpay-checkout-frame').get('body').find('button:visible')

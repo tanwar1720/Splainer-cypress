@@ -7,12 +7,13 @@ module.exports = defineConfig({
 
     setupNodeEvents(on, config) {
       on
-      ("task" , {
-        generateOTP: require("cypress-otp")
-     })
-      //implement node event listeners here
+      //("task" , {
+       // generateOTP: require("cypress-otp")
+     // })
+      // implement node event listeners here
     },
     specPattern:'cypress/e2e/Integration/Login/*.js',
+    "chromeWebSecurity": false
 
   },
   includeShadowDom: true
