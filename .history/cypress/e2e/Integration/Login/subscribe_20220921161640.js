@@ -60,7 +60,7 @@ describe('subscribePage', () => {
         cy.get('span:visible').eq(10).click()
 
     })
-        it.only('Getting  14 Days trial',() => {
+        it('Getting  14 Days trial',() => {
             cy.get('.nav-link ').eq(1).click()
             cy.url().should('include', 'https://staging.splainer.in/subscribe')
             cy.get('.btn.btn-blue-o.px-3.btn-sub').should('contain.text', 'Sign me up!')
@@ -78,12 +78,9 @@ describe('subscribePage', () => {
             cy.get('#get-otp').click()
             cy.task("generateOTP", "yourSecret").then((token) => {
                 cy.get('#otp').type(token,{force:true})
-            }) 
-             cy.get('#subscribe').click()
-             cy.wait(1000)
-             cy.get('.swal-modal').contains('OTP Mismatch')
-             
-
+            })
+            cy.get('#subscribe').click()
+            cy.get('.swal-modal').contains('OTP Mismatch')
 
         })
      })

@@ -79,11 +79,10 @@ describe('subscribePage', () => {
             cy.task("generateOTP", "yourSecret").then((token) => {
                 cy.get('#otp').type(token,{force:true})
             }) 
-             cy.get('#subscribe').click()
-             cy.wait(1000)
-             cy.get('.swal-modal').contains('OTP Mismatch')
-             
+            cy.wait(1000)
+            cy.get('.swal-modal').contains('OTP Mismatch')
 
+            cy.get('#subscribe').click()
 
         })
      })

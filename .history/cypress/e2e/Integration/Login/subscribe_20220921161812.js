@@ -82,7 +82,6 @@ describe('subscribePage', () => {
              cy.get('#subscribe').click()
              cy.wait(1000)
              cy.get('.swal-modal').contains('OTP Mismatch')
-             
 
 
         })
