@@ -23,24 +23,6 @@ describe('Gift a friend',()=>
         cy.get('.col-md-7').find('h1').should('have.text','Gift a Friend')
         cy.contains('.fa-ul','sumit tanwar')
         cy.get('h2').should('contain.text','To')
-        cy.get("#first_name").type('Amita').should('have.value','Amita')
-        cy.get('#last_name').type('Kumar').should('have.value','Kumar')
-        cy.get('#emaiId').type('pedoli2577@bongcs.com',{delay :100})
-        cy.get('.custom-select').eq(0).select('Singapore').should('have.value','Singapore')
-        cy.get('#contact_no').type('987654456712').should('have.value','987654456712')
-        cy.get('.custom-select').eq(1).select('25-34').should('be.visible')
-        cy.get('.custom-select').eq(2).select('Female').should('have.value','Female')
-        cy.get('.card').eq(2).find('img').should('be.visible')
-        cy.get('.card').eq(2).should('contain.text','Yearly')
-        cy.get('.card').eq(2).should('contain.text','1999.00')
-        cy.get('#gift-subscribe').contains('Gift Now & Pay')
-        cy.get('#gift-subscribe').click()
-
-
-
-
-
-
         
      })
 })

@@ -21,9 +21,6 @@ describe('foundingMember',()=>
         cy.get('.note:visible').should('be.visible')
 
         var priceSlider = cy.get('#slider');
-        priceSlider.noUiSlider.updateOptions({
-            value: 10000,
-        })
         cy.log(priceSlider)
           cy.get('.noUi-touch-area')
           .invoke('val', 25)

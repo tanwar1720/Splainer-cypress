@@ -19,27 +19,11 @@ describe('foundingMember',()=>
         cy.get('#slider').should('be.visible')
         cy.get('.slider.mt-3.d-none.d-md-block').should('be.visible')
         cy.get('.note:visible').should('be.visible')
-
-        var priceSlider = cy.get('#slider');
-        priceSlider.noUiSlider.updateOptions({
-            value: 10000,
-        })
-        cy.log(priceSlider)
-          cy.get('.noUi-touch-area')
-          .invoke('val', 25)
-          .trigger('change')
-          .get('.noUi-touch-area').click()
-          
-
-
-
-
-
         cy.get('.btn.btn-blue-o.btn-sub').should('contain.text','Count Me In!')
         cy.get('.d-block > .text-center > .btn').click()
         cy.get('.modal').should('be.visible')
         cy.get('.modal').should('contain.text','Subscribe')
-        cy.get('.close').click({force:true})
+        cy.get('.close').click()
        // cy.get('.modal-body').find('.close > span').click()
         cy.get('.container').eq(2).should('be.visible')
         cy.get('.container').eq(2).should('contain.text','splainer')

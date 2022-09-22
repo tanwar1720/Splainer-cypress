@@ -20,10 +20,7 @@ describe('foundingMember',()=>
         cy.get('.slider.mt-3.d-none.d-md-block').should('be.visible')
         cy.get('.note:visible').should('be.visible')
 
-        var priceSlider = cy.get('#slider');
-        priceSlider.noUiSlider.updateOptions({
-            value: 10000,
-        })
+        var priceSlider = document.getElementById('slider');
         cy.log(priceSlider)
           cy.get('.noUi-touch-area')
           .invoke('val', 25)

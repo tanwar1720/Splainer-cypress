@@ -26,6 +26,8 @@ describe('Gift a friend',()=>
         cy.get("#first_name").type('Amita').should('have.value','Amita')
         cy.get('#last_name').type('Kumar').should('have.value','Kumar')
         cy.get('#emaiId').type('pedoli2577@bongcs.com',{delay :100})
+        //cy.get('select').eq(0).select('+91 (India)').click()
+       // cy.get('select').eq(2).select('+91 (India)').should('have.value', 'India')
         cy.get('.custom-select').eq(0).select('Singapore').should('have.value','Singapore')
         cy.get('#contact_no').type('987654456712').should('have.value','987654456712')
         cy.get('.custom-select').eq(1).select('25-34').should('be.visible')
