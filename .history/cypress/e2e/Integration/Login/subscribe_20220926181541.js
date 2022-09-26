@@ -86,7 +86,7 @@ describe('subscribePage', () => {
 
     })
 
-    it.only ('Subscribe page after Login',()=>
+    it ('Subscribe page after Login',()=>
     {
         cy.visit('https://staging.splainer.in/log-in')
         cy.get('li').eq(6).click()
@@ -95,13 +95,9 @@ describe('subscribePage', () => {
         cy.get('#Login').click()
         cy.url().should('includes.string', 'https://staging.splainer.in/user/myAccount')
         cy.wait(1000)
-        cy.get('.nav-item').eq(1).click()
-        cy.url().should('contain','subscribe')
-        cy.get('.container').eq(2).find('h2').title('Subscribe to Splainer')
-        cy.get('.card.referal-disc-card').should('be.visible')
-        cy.get('.card.referal-disc-card').eq(0).find('p').contains('Yearly subscription')
-        cy.get('.mt-3.mb-0.text-danger').should('be.visible')
-        cy.get('.card.referal-disc-card').eq(0).find('.mt-3.mb-0.text-danger').should('contain','Discount of ₹1000 on gift')
+        cy.get('#navbarDropdown').click()
+        cy.wait(1000)
+        cy.get('a.dropdown-item.pointer').click()
         
     })
 })

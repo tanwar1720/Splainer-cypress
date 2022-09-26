@@ -99,9 +99,6 @@ describe('subscribePage', () => {
         cy.url().should('contain','subscribe')
         cy.get('.container').eq(2).find('h2').title('Subscribe to Splainer')
         cy.get('.card.referal-disc-card').should('be.visible')
-        cy.get('.card.referal-disc-card').eq(0).find('p').contains('Yearly subscription')
-        cy.get('.mt-3.mb-0.text-danger').should('be.visible')
-        cy.get('.card.referal-disc-card').eq(0).find('.mt-3.mb-0.text-danger').should('contain','Discount of ₹1000 on gift')
         
     })
 })

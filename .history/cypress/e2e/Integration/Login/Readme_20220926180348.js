@@ -80,7 +80,7 @@ describe('First User interface', () => {
         cy.url().should('have.string', 'https://staging.splainer.in/posts/2022/gift-1')
         cy.get('.date').should('be.visible')
     })
-    it("Check date to be less or equal than todays", () => {
+    it.only("Check date to be less or equal than todays", () => {
         cy.visit('https://staging.splainer.in/posts/2022/gift-1')
         const todaysDate = dayjs().format('MM,DD, YYYY')
 

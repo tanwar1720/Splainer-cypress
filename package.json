@@ -4,6 +4,7 @@
     "cypress-iframe": "^1.0.1"
   },
   "dependencies": {
-    "cypress-otp": "^1.0.3"
+    "cypress-otp": "^1.0.3",
+    "dayjs": "^1.11.5"
   }
 }
